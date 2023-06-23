@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.login-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: fit-content;
+    
+}
+
+.genre-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: fit-content;
+}
