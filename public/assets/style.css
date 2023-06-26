@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 10px;
+
+}
+
+#login-container {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15rem;
+    
+}
+
+.genre-container {
+    margin: auto;
+    margin-top: 5rem;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: center;
+
+  
+}
+
+.btn-secondary {
+    margin-top: 10px;
+}
