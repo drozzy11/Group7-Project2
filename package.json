@@ -2,8 +2,9 @@
     "name": "GrooveHub",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
+      "start": "app.js",
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -15,6 +16,8 @@
         "dotenv": "^8.2.0",
         "express-handlebars": "^5.2.0",
         "handlebars": "^4.7.6",
-        "sequelize": "^6.3.5"
+        "sequelize": "^6.3.5",
+        "node-fetch": "^2.6.1"
+
     }
   }
