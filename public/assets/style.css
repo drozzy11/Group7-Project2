@@ -5,9 +5,19 @@
     
 }
 
-body {
-    margin: 10px;
+:root {
+    /* Color pallete ^^*/
+    --deepsea: #0C2B26;
+    --slate: #2F5A5B;
+    --current: #117075;
+    --lace: #f9f7f2;
+    --citrus: #F28016;
+    --cherry: #C54444;
+    --night: #04100E;
+}
 
+body {
+    background-color: var(--lace);
 }
 
 
@@ -18,6 +28,7 @@ body {
     justify-content: center;
     margin: auto;
     margin-top: 15rem;
+    margin-bottom: 15rem;
     
 }
 
@@ -25,7 +36,7 @@ body {
     color: white;
     margin-top: 10px;
     border-radius: 7px;
-    background-color: #6c757d;
+    background-color: var(--current);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -78,7 +89,6 @@ a {
     padding: 0 10px;
     justify-content: center;
 
-  
 }
 
 #generate-playlist-btn {
@@ -105,4 +115,64 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* .micIcon {
+    width: 40px;
+    height: auto;
+    margin-top: 1px;
+} */
+
+#navbar-brand {
+    color: var(--cherry);
+}
+
+#hero-text {
+    color: var(--cherry);
+}
+#hero-text p{
+    color: var(--);
+}
+
+.login-modal {
+    background-color: var(--cherry);
+}
+
+#nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: fit-content;
+    padding: 0;
+}
+
+#nav {
+    background-color: var(--cherry);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 30vh;
+    width: 100vw;
+}
+
+#navbar-title {
+    color: var(--lace);
+    font-size: 2.5rem;
+    padding-right: 45%;
+}
+
+#navbar-text {
+    color: var(--lace);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: var(--cherry);
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    width: 100vw;
+
 }
