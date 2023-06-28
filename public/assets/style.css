@@ -17,21 +17,19 @@
     --white: #FFFFFF;
 }
 /* index.html */
-/* #grad {
-    
-    height: 100vh;
-    width: 100vw;
-} */
+
 body {
     height: 100vh;
     background-color: #04100E;
     background-image: linear-gradient(to bottom right, var(--citrus)33%,  var(--current)100%);
     /* background-color: var(--lace); */
 }
-/* header styling */
+/* index.html: header/nav styling */
 header {
     background-color: transparent;
-
+}
+header p{
+    margin: 0%;
 }
 
 #nav-container {
@@ -56,15 +54,10 @@ header {
 #navbar-text {
     color: var(--lace);
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: stretch;
-}
-header p{
-    margin: 0%;
 }
 
-/* login styling */
+
+/* index.html: login styling */
 
 
 #login-container {
@@ -79,19 +72,36 @@ header p{
 }
 
 .login-btn {
-    color: white;
     margin-top: 10px;
-    border-radius: 7px;
-    background-color: var(--current);
+    background-color: var(--lace);
+    border: 2px solid var(--current);
+    border-radius: 30px;
+    box-shadow: var(--current) 4px 4px 0 0;
+    color: var(--current);
+    cursor: pointer;
+    display: inline-block;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     height: 2.5rem;
+}
+
+.login-btn:hover {
+    background-color: var(--current);
+    border: 2px solid var(--lace);
+    color: var(--lace);
+    box-shadow: var(--lace) 4px 4px 0 0;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 #launch-playlist {
     max-width: fit-content;
@@ -101,6 +111,39 @@ a {
     margin: auto;
     margin-top: 2rem;
     
+}
+
+#playlistBtn {
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--current);
+    border-radius: 30px;
+    box-shadow: var(--current) 4px 4px 0 0;
+    color: var(--current);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+}
+#playlistBtn a{
+    color: var(--current);
+}
+#playlistBtn a:hover{
+    color: var(--lace);
+}
+#playlistBtn:hover {
+    background-color: var(--current);
+    border: 2px solid var(--lace);
+    color: var(--lace);
+    box-shadow: var(--lace) 4px 4px 0 0;
 }
 
 footer {
