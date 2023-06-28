@@ -9,16 +9,62 @@
     /* Color pallete ^^*/
     --deepsea: #0C2B26;
     --slate: #2F5A5B;
-    --current: #117075;
+    --current: #00B4AB;
     --lace: #f9f7f2;
     --citrus: #F28016;
     --cherry: #C54444;
     --night: #04100E;
+    --white: #FFFFFF;
+}
+/* index.html */
+/* #grad {
+    
+    height: 100vh;
+    width: 100vw;
+} */
+body {
+    height: 100vh;
+    background-color: #04100E;
+    background-image: linear-gradient(to bottom right, var(--citrus)33%,  var(--current)100%);
+    /* background-color: var(--lace); */
+}
+/* header styling */
+header {
+    background-color: transparent;
+
 }
 
-body {
-    background-color: var(--lace);
+#nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: fit-content;
+    padding: 0;
 }
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 20vh;
+    width: 100vw;
+}
+#navbar-title {
+    color: var(--lace);
+    font-size: 2.5rem;
+    padding-right: 45%;
+}
+#navbar-text {
+    color: var(--lace);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+header p{
+    margin: 0%;
+}
+
+/* login styling */
 
 
 #login-container {
@@ -27,8 +73,8 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: 15rem;
-    margin-bottom: 15rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     
 }
 
@@ -56,6 +102,20 @@ a {
     margin-top: 2rem;
     
 }
+
+footer {
+    background-color: transparent;
+    color: var(--lace);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 8vh;
+    width: 100vw;
+    margin: .25rem;
+
+}
+
+/* playlist.html */
 
 .parameter-container {
     margin: auto;
@@ -117,62 +177,4 @@ a {
     justify-content: center;
 }
 
-/* .micIcon {
-    width: 40px;
-    height: auto;
-    margin-top: 1px;
-} */
 
-#navbar-brand {
-    color: var(--cherry);
-}
-
-#hero-text {
-    color: var(--cherry);
-}
-#hero-text p{
-    color: var(--);
-}
-
-.login-modal {
-    background-color: var(--cherry);
-}
-
-#nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: fit-content;
-    padding: 0;
-}
-
-#nav {
-    background-color: var(--cherry);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 30vh;
-    width: 100vw;
-}
-
-#navbar-title {
-    color: var(--lace);
-    font-size: 2.5rem;
-    padding-right: 45%;
-}
-
-#navbar-text {
-    color: var(--lace);
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer {
-    background-color: var(--cherry);
-    display: flex;
-    flex-direction: row;
-    height: 8vh;
-    width: 100vw;
-
-}
