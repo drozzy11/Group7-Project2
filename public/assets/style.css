@@ -1,10 +1,13 @@
+/* general styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
 }
-
+a {
+    text-decoration: none;
+}
 :root {
     /* Color pallete ^^*/
     --deepsea: #0C2B26;
@@ -22,16 +25,16 @@ body {
     height: 100vh;
     background-color: #04100E;
     background-image: linear-gradient(to bottom right, var(--citrus)33%,  var(--current)100%);
-    /* background-color: var(--lace); */
+
 }
 /* index.html: header/nav styling */
+
 header {
     background-color: transparent;
 }
 header p{
     margin: 0%;
 }
-
 #nav-container {
     display: flex;
     flex-direction: row;
@@ -58,7 +61,6 @@ header p{
 
 
 /* index.html: login styling */
-
 
 #login-container {
     max-width: fit-content;
@@ -99,10 +101,7 @@ header p{
     box-shadow: var(--lace) 4px 4px 0 0;
 }
 
-a {
-    text-decoration: none;
-    /* color: white; */
-}
+
 #launch-playlist {
     max-width: fit-content;
     display: flex;
@@ -110,7 +109,6 @@ a {
     justify-content: center;
     margin: auto;
     margin-top: 2rem;
-    
 }
 
 #playlistBtn {
