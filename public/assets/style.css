@@ -57,6 +57,7 @@ header p{
 }
 #navbar-text {
     color: var(--lace);
+    font-family: 'Pathway Extreme', sans-serif;
     height: auto;
 }
 
@@ -83,6 +84,7 @@ header p{
     color: var(--slate);
     cursor: pointer;
     display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     padding: 0 1rem;
@@ -100,6 +102,7 @@ header p{
     border: 2px solid var(--cherry);
     color: var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
+    font-style: italic;
 }
 
 
@@ -121,6 +124,7 @@ header p{
     color: var(--slate);
     cursor: pointer;
     display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     padding: 0 1rem;
@@ -143,6 +147,7 @@ header p{
     border: 2px solid var(--cherry);
     color: var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
+    font-style: italic;
 }
 
 footer {
