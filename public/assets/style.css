@@ -50,6 +50,7 @@ header p{
     width: 100vw;
 }
 #navbar-title {
+    font-family: 'Bungee Shade', cursive;    
     color: var(--lace);
     font-size: 2.5rem;
     padding-right: 45%;
@@ -76,10 +77,10 @@ header p{
 .login-btn {
     margin-top: 10px;
     background-color: var(--lace);
-    border: 2px solid var(--current);
+    border: 2px solid var(--slate);
     border-radius: 30px;
-    box-shadow: var(--current) 4px 4px 0 0;
-    color: var(--current);
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
     cursor: pointer;
     display: inline-block;
     font-size: 1rem;
@@ -95,10 +96,10 @@ header p{
 }
 
 .login-btn:hover {
-    background-color: var(--current);
-    border: 2px solid var(--lace);
-    color: var(--lace);
-    box-shadow: var(--lace) 4px 4px 0 0;
+    background-color: var(--lace);
+    border: 2px solid var(--cherry);
+    color: var(--cherry);
+    box-shadow: var(--cherry) -4px 4px 0;
 }
 
 
@@ -114,10 +115,10 @@ header p{
 #playlistBtn {
     margin-top: 10px;
     background-color: var(--lace);
-    border: 2px solid var(--current);
+    border: 2px solid var(--slate);
     border-radius: 30px;
-    box-shadow: var(--current) 4px 4px 0 0;
-    color: var(--current);
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
     cursor: pointer;
     display: inline-block;
     font-size: 1rem;
@@ -132,16 +133,16 @@ header p{
     height: 2.5rem;
 }
 #playlistBtn a{
-    color: var(--current);
+    color: var(--slate);
 }
 #playlistBtn a:hover{
-    color: var(--lace);
+    color: var(--cherry);
 }
 #playlistBtn:hover {
-    background-color: var(--current);
-    border: 2px solid var(--lace);
-    color: var(--lace);
-    box-shadow: var(--lace) 4px 4px 0 0;
+    background-color: var(--lace);
+    border: 2px solid var(--cherry);
+    color: var(--cherry);
+    box-shadow: var(--cherry) -4px 4px 0;
 }
 
 footer {
