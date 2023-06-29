@@ -13,8 +13,8 @@ $(function() {
     });
 
 //Home page styling functions
-document.querySelector('#playlistBtn','.login-btn').addEventListener('click', () => {
-  document.querySelector('#playlistBtn','.login-btn').classList.add('.homeOnCLick');
+document.querySelector('#playlistBtn','#login-btn').addEventListener('click', () => {
+  document.querySelector('#playlistBtn','#login-btn').classList.add('.homeOnCLick');
 }); 
 
 document.querySelector('.micIcon').addEventListener('click', () => {
@@ -106,3 +106,10 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+// hide and show playlist
+
+document.querySelector('#generate-playlist-btn').addEventListener('click', () => {
+  document.querySelector('#playlist-container').classList.remove('hide');
+  document.querySelector('#generate-playlist-btn').classList.add('hide');
+});

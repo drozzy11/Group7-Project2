@@ -74,13 +74,13 @@ header p{
     height: 20vh;
     width: 100vw;
 }
-.navbar-title {
+#navbar-title {
     font-family: 'Bungee Shade', cursive;    
     color: var(--lace);
     font-size: 2.5rem;
     padding-right: 45%;
 }
-.navbar-text {
+#navbar-text {
     color: var(--lace);
     font-family: 'Pathway Extreme', sans-serif;
     height: auto;
@@ -100,7 +100,7 @@ header p{
     
 }
 
-.login-btn {
+#login-btn {
     margin-top: 10px;
     background-color: var(--lace);
     border: 2px solid var(--slate);
@@ -122,7 +122,7 @@ header p{
     height: 2.5rem;
 }
 
-.login-btn:hover, #playlistBtn:hover, .homeOnCLick {
+#login-btn:hover, #playlistBtn:hover, .homeOnCLick {
     background-color: var(--lace); 
     border: 2px solid var(--cherry);
     color: var(--cherry);
@@ -389,3 +389,8 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+
+/* hide and show classes */
+.hide {
+    display: none !important;
+};
