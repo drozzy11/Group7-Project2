@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/public/assets/style.css">
 </head>
 <body>
+  <div id="playlist-background-container">
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -21,33 +22,33 @@
           </nav>
     </header>
 
-    <main> 
-        <div class="parameter-container">
-        <div class="genre-container">
-          <select class="form-select" id="genre-select" aria-label="Default select example">
-            <option selected>Genre</option>
-            <option value="rock">Rock</option>
-            <option value="pop">Pop</option>
-            <option value="country">Country</option>
-          </select>
-        </div>
+  <main> 
+    <div class="parameter-container">
+    <div class="genre-container">
+      <select class="form-select" id="genre-select" aria-label="Default select example">
+        <option selected>Genre</option>
+        <option value="rock">Rock</option>
+        <option value="pop">Pop</option>
+        <option value="country">Country</option>
+      </select>
+    </div>
 
-        <div class="popularity-container">
-            <select id="popularity-select" class="form-select" aria-label="Default select example">
-                <option selected>Popularity</option>
-                <option value="50">Top Hits</option>
-                <option value="0">New Wave</option>
-            </select>
-        </div>
+    <div class="popularity-container">
+      <select id="popularity-select" class="form-select" aria-label="Default select example">
+        <option selected>Popularity</option>
+        <option value="50">Top Hits</option>
+        <option value="0">New Wave</option>
+      </select>
+    </div>
 
-        <div class="number-container">
-            <select id="num-songs-select" class="form-select" aria-label="Default select example">
-                <option selected>Number of Songs</option>
-                <option value="3">3</option>
-                <option value="6">6</option>
-                <option value="8">8</option>
-            </select>
-        </div>
+    <div class="number-container">
+      <select id="num-songs-select" class="form-select" aria-label="Default select example">
+        <option selected>Number of Songs</option>
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+      </select>
+    </div>
                     
     </div>
                 
@@ -61,52 +62,53 @@
     </div>
     
     </div>
-</main>
+  </main>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
-<script>
-$(document).ready(function () {
-  $("#generate-playlist-btn").click(function () {
-    const genre = $("#genre-select").val();
-    const popularity = $("#popularity-select").val();
-    const numSongs = $("#num-songs-select").val();
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
+  <script>
+  $(document).ready(function () {
+    $("#generate-playlist-btn").click(function () {
+      const genre = $("#genre-select").val();
+      const popularity = $("#popularity-select").val();
+      const numSongs = $("#num-songs-select").val();
 
-    $.ajax({
-      url: "/callback",
-      data: {
-        genre: genre,
-        popularity: popularity,
-        numSongs: numSongs
-      },
-      success: function (response) {
-        console.log(response); // Log the response to the browser console for inspection
+      $.ajax({
+        url: "/callback",
+        data: {
+          genre: genre,
+          popularity: popularity,
+          numSongs: numSongs
+        },
+        success: function (response) {
+          console.log(response); // Log the response to the browser console for inspection
 
-        const tracks = response.tracks.tracks; // Access the inner tracks array
+          const tracks = response.tracks.tracks; // Access the inner tracks array
 
-        const playlist = tracks.map(function (track) {
-          return `
-            <li class="list-group-item">
-              <div class="d-flex align-items-center">
-                <img src="${track.cover}" alt="Cover Image" class="mr-3">
-                <div>
-                  <a href="${track.link}" target="_blank">
-                    <h5>${track.name}</h5>
-                  </a>
-                  <p>Artist: ${track.artist}</p>
+          const playlist = tracks.map(function (track) {
+            return `
+              <li class="list-group-item">
+                <div class="d-flex align-items-center">
+                  <img src="${track.cover}" alt="Cover Image" class="mr-3">
+                  <div>
+                    <a href="${track.link}" target="_blank">
+                      <h5>${track.name}</h5>
+                    </a>
+                    <p>Artist: ${track.artist}</p>
+                  </div>
                 </div>
-              </div>
-            </li>`;
-        });
+              </li>`;
+          });
 
-        $("#playlist").html(playlist.join(""));
-      },
-      error: function (xhr, status, error) {
-        console.log(error); // Log the error to the browser console
-      }
+          $("#playlist").html(playlist.join(""));
+        },
+        error: function (xhr, status, error) {
+          console.log(error); // Log the error to the browser console
+        }
+      });
     });
   });
-});
 
-</script>
+  </script>
+</div>
 </body>
 </html>
