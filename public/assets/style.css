@@ -23,12 +23,6 @@ a {
 
 body {
     height: 100vh;
-    /* width: 100vw;
-    background-image: linear-gradient(to bottom right, var(--citrus)33%,  var(--current)100%);
-    background-color: var(--current);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
 #background-container {
@@ -42,8 +36,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* z-index: -1; */
 }
+
 /* index.html: header/nav styling */
 @media (max-width: 767px) {
     .navbar-toggler {
@@ -180,14 +174,6 @@ header p{
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic;
 }
-/* } */
-/* .homeOnCLick {
-    background-color: var(--lace) !important;
-    border: 2px solid var(--cherry) !important;
-    color: var(--cherry);
-    box-shadow: var(--cherry) -4px 4px 0;
-    font-style: italic;
-} for mobile users that don't have the hover option */
 
 footer {
     background-color: transparent;
@@ -202,6 +188,18 @@ footer {
 }
 
 /* playlist.html */
+#playlist-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+    background-color: linear-gradient(to bottom, var(--cherry) 33%, var(--current) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .parameter-container {
     margin: auto;
@@ -224,9 +222,6 @@ footer {
 .number-container {
     margin: 15px;
 }
-
-
-
 
 .form {
     width: 100%;
