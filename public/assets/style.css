@@ -19,11 +19,33 @@ a {
     --night: #04100E;
     --white: #FFFFFF;
 }
-/* index.html */
-
 body {
     height: 100vh;
 }
+/* index.html: header/nav styling */
+@media (max-width: 767px) {
+    .navbar-toggler {
+    display: none;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+.micIcon {
+    cursor: pointer;
+}
+
+header {
+    background-color: transparent;
+}
+header p{
+    margin: 0%;
+}
+/* index.html */
+
+
 
 #background-container {
     position: fixed;
@@ -38,29 +60,6 @@ body {
     background-position: center;
 }
 
-/* index.html: header/nav styling */
-@media (max-width: 767px) {
-    .navbar-toggler {
-    display: none;
-    }
-}
-@media (max-width: 991px) {
-    .navbar-toggler {
-        display: none;
-    }
-}
-
-
-.micIcon {
-    cursor: pointer;
-}
-
-header {
-    background-color: transparent;
-}
-header p{
-    margin: 0%;
-}
 #nav-container {
     display: flex;
     flex-direction: row;
@@ -75,13 +74,13 @@ header p{
     height: 20vh;
     width: 100vw;
 }
-#navbar-title {
+.navbar-title {
     font-family: 'Bungee Shade', cursive;    
     color: var(--lace);
     font-size: 2.5rem;
     padding-right: 45%;
 }
-#navbar-text {
+.navbar-text {
     color: var(--lace);
     font-family: 'Pathway Extreme', sans-serif;
     height: auto;
@@ -186,7 +185,7 @@ footer {
     margin: .25rem;
 
 }
-
+/* -------------------------------- */
 /* playlist.html */
 #playlist-background-container {
     position: fixed;
@@ -195,11 +194,12 @@ footer {
     width: 100%;
     height: 100vh;
     
-    background-color: linear-gradient(to bottom, var(--cherry) 33%, var(--current) 100%);
+    background-image: linear-gradient(to bottom, var(--cherry) 33%, var(--current) 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 
 .parameter-container {
     margin: auto;
@@ -208,11 +208,122 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     
 }
 
 .genre-container {
     margin: 15px;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: 'Pathway Extreme', sans-serif;
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+}
+.custom-select select {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /* display: none;*/ /*hide original SELECT element: */
+}
+
+.custom-select:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: var(--slate) transparent transparent transparent;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.custom-select.open:after {
+    border-color: transparent transparent var(--slate) transparent;
+    transform: translateY(-50%) rotate(180deg);
+}
+.select-selected {
+    /* background-color: var(--cherry); */
+}
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    /* padding: 8px 16px; */
+    /* border: 1px solid transparent; */
+    /* border-color: transparent transparent
+     rgba(0, 0, 0, 0.1) transparent; */
+    cursor: pointer;
+}
+
+.select-items div:hover {
+    background-color: var(--lace);
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    color: var(--slate);
+    background-color: var(--lace);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+}
+
+.select-items.open {
+    display: block;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .popularity-container {
@@ -231,12 +342,33 @@ footer {
     justify-content: center;
 
 }
+.button-container {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
 
 #generate-playlist-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+
 }
 /* playlist page */ 
 
