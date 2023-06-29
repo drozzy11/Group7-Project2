@@ -54,42 +54,59 @@
     <button type="button" class="btn btn-secondary" id="generate-playlist-btn">Generate Playlist</button>
 
     <div id="playlist-container">
-        <h2 id="playlist-title">Playlist</h2>
-        <div class="card" style="width: 18rem;">
-            <ul id="playlist" class="list-group list-group-flush">
-            </ul>
-        </div>
+      <h2 id="playlist-title">Playlist</h2>
+      <div class="card" style="width: 18rem;">
+        <ul id="playlist" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+    
     </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
 <script>
-  $(document).ready(function () {
-    $("#generate-playlist-btn").click(function () {
-      const genre = $("#genre-select").val();
-      const popularity = $("#popularity-select").val();
-      const numSongs = $("#num-songs-select").val();
+$(document).ready(function () {
+  $("#generate-playlist-btn").click(function () {
+    const genre = $("#genre-select").val();
+    const popularity = $("#popularity-select").val();
+    const numSongs = $("#num-songs-select").val();
 
-      $.ajax({
-        url: "/callback",
-        data: {
-          genre: genre,
-          popularity: popularity,
-          numSongs: numSongs
-        },
-        success: function (response) {
-          $("#playlist").empty();
-          response.forEach(function (track) {
-            const listItem = "<li class='list-group-item'>" + track.name + " : " + track.artists[0].name + "</li>";
-            $("#playlist").append(listItem);
-          });
-        },
-        error: function (xhr, status, error) {
-          console.log(error);
-        }
-      });
+    $.ajax({
+      url: "/callback",
+      data: {
+        genre: genre,
+        popularity: popularity,
+        numSongs: numSongs
+      },
+      success: function (response) {
+        console.log(response); // Log the response to the browser console for inspection
+
+        const tracks = response.tracks.tracks; // Access the inner tracks array
+
+        const playlist = tracks.map(function (track) {
+          return `
+            <li class="list-group-item">
+              <div class="d-flex align-items-center">
+                <img src="${track.cover}" alt="Cover Image" class="mr-3">
+                <div>
+                  <a href="${track.link}" target="_blank">
+                    <h5>${track.name}</h5>
+                  </a>
+                  <p>Artist: ${track.artist}</p>
+                </div>
+              </div>
+            </li>`;
+        });
+
+        $("#playlist").html(playlist.join(""));
+      },
+      error: function (xhr, status, error) {
+        console.log(error); // Log the error to the browser console
+      }
     });
   });
+});
+
 </script>
 </body>
 </html>

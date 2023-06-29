@@ -1,0 +1,23 @@
+{
+    "name": "GrooveHub",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "start": "server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql2": "^2.3.3",
+        "spotify-web-api-node": "^5.0.0",
+        "dotenv": "^8.2.0",
+        "express-handlebars": "^5.2.0",
+        "handlebars": "^4.7.6",
+        "sequelize": "^6.3.5",
+        "node-fetch": "^2.6.1"
+
+    }
+  }

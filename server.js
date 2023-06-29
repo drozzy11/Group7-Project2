@@ -1,9 +1,14 @@
-
 const express = require('express');
 const app = express();
+const api = require('./api');
 
-// static files from the "public" directory
+// Serve static files from the "public" directory
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/playlist.html');
+});
+
 
 app.use(express.json());
 
@@ -15,17 +20,10 @@ app.get('/callback', (req, res) => {
     return;
   }
 
-  const api = require('./api');
-
   api.searchSongsByGenre(genre, popularity, numSongs)
     .then(function (tracks) {
-      console.log("Tracks:");
-      for (let track of tracks) {
-        console.log(track.name + " : " + track.artists[0].name);
-      }
-
-      // Send the tracks array to the webpage
-      res.send(tracks);
+      console.log("Tracks:", tracks); // Add this line for debugging
+      res.json({ tracks });
     })
     .catch(function (err) {
       console.log('Something went wrong!', err);
