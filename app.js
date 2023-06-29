@@ -18,8 +18,20 @@ var authOptions = {
   body: 'grant_type=client_credentials'
 };
 
+// Serve static files from the "public" directory
+app.use(express.static('public'));
+
+app.use(express.json());
 
 app.get('/callback', (req, res) => {
+  // Handle the callback logic here
+  const { genre, popularity, numSongs } = req.query;
+
+  if (!genre || !popularity || !numSongs) {
+    res.status(400).json({ error: 'Genre, popularity, and numSongs are required' });
+    return;
+  }
+
   // Make the token request
   fetch(authOptions.url, {
     method: 'POST',
@@ -51,8 +63,8 @@ app.get('/callback', (req, res) => {
               // Get Recommendations Based on Seeds
               spotifyApi.getRecommendations({
                 seed_genres: [genre],
-                min_popularity: 50,
-                limit: 8 // Adjust the limit according to your preference
+                min_popularity: parseInt(popularity), // Convert to integer
+                limit: parseInt(numSongs) // Convert to integer
               })
                 .then(function (data) {
                   let tracks = data.body.tracks;
@@ -68,22 +80,24 @@ app.get('/callback', (req, res) => {
         });
       }
 
-      searchSongsByGenre('your_genre_here') // Replace 'your_genre_here' with the desired genre
+      searchSongsByGenre(genre)
         .then(function (tracks) {
           console.log("Tracks:");
           for (let track of tracks) {
             console.log(track.name + " : " + track.artists[0].name);
           }
+
+          // Send the tracks array to the webpage
+          res.send(tracks);
         })
         .catch(function (err) {
           console.log('Something went wrong!', err);
+          res.status(500).json({ error: 'Error generating playlist' });
         });
-
-      res.send('Access token request initiated.');
     })
     .catch(function (error) {
       console.error('Error getting Tokens:', error);
-      res.send(`Error getting Tokens: ${error}`);
+      res.status(500).json({ error: 'Error getting tokens' });
     });
 });
 
