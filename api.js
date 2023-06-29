@@ -1,4 +1,3 @@
-// api.js
 const fetch = require('node-fetch');
 require('dotenv').config();
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -16,7 +15,7 @@ var authOptions = {
   body: 'grant_type=client_credentials'
 };
 
-const spotifyApi = new SpotifyWebApi();
+var spotifyApi = new SpotifyWebApi();
 
 function searchSongsByGenre(genre, popularity, numSongs) {
   return new Promise((resolve, reject) => {
@@ -53,7 +52,21 @@ function searchSongsByGenre(genre, popularity, numSongs) {
             })
               .then(function (data) {
                 let tracks = data.body.tracks;
-                resolve(tracks);
+                let formattedTracks = [];
+
+                for (let track of tracks) {
+                  let formattedTrack = {
+                    name: track.name,
+                    artist: track.artists[0].name,
+                    cover: track.album.images[0].url,
+                    link: track.external_urls.spotify
+                  };
+
+                  formattedTracks.push(formattedTrack);
+                }
+
+                resolve({ tracks: formattedTracks });
+
               })
               .catch(function (err) {
                 reject(err);
