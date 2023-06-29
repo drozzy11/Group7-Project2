@@ -179,6 +179,7 @@ header p{
     color: var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic; */
+}
 /* } */
 /* .homeOnCLick {
     background-color: var(--lace) !important;
@@ -261,5 +262,3 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
-
-
