@@ -50,6 +50,12 @@ body {
     display: none;
     }
 }
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
 
 .micIcon {
     cursor: pointer;
