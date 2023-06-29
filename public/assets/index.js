@@ -11,3 +11,8 @@ $(function() {
       $('#modalLoginForm').modal('hide');
     });
     });
+
+//Home page styling functions
+document.querySelector('#playlistBtn','.login-btn').addEventListener('click', () => {
+  document.querySelector('#playlistBtn','.login-btn').classList.add('.homeOnCLick');
+}); 

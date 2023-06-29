@@ -23,9 +23,26 @@ a {
 
 body {
     height: 100vh;
-    background-color: #04100E;
+    /* width: 100vw;
     background-image: linear-gradient(to bottom right, var(--citrus)33%,  var(--current)100%);
+    background-color: var(--current);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
 
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--current);
+    background-image: linear-gradient(to bottom right, var(--citrus) 33%, var(--current) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
 }
 /* index.html: header/nav styling */
 
@@ -105,7 +122,6 @@ header p{
     font-style: italic;
 }
 
-
 #launch-playlist {
     max-width: fit-content;
     display: flex;
@@ -149,6 +165,13 @@ header p{
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic;
 }
+.homeOnCLick {
+    background-color: var(--lace);
+    border: 2px solid var(--cherry);
+    color: var(--cherry);
+    box-shadow: var(--cherry) -4px 4px 0;
+    font-style: italic;
+} /*for mobile users that don't have the hover option*/
 
 footer {
     background-color: transparent;
