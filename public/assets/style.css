@@ -23,12 +23,6 @@ a {
 
 body {
     height: 100vh;
-    /* width: 100vw;
-    background-image: linear-gradient(to bottom right, var(--citrus)33%,  var(--current)100%);
-    background-color: var(--current);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
 #background-container {
@@ -178,16 +172,8 @@ header p{
     border: 2px solid var(--cherry);
     color: var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
-    font-style: italic; */
+    font-style: italic; 
 }
-/* } */
-/* .homeOnCLick {
-    background-color: var(--lace) !important;
-    border: 2px solid var(--cherry) !important;
-    color: var(--cherry);
-    box-shadow: var(--cherry) -4px 4px 0;
-    font-style: italic;
-} for mobile users that don't have the hover option */
 
 footer {
     background-color: transparent;
