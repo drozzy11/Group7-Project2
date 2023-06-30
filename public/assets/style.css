@@ -228,7 +228,6 @@ footer {
     color: var(--slate);
     cursor: pointer;
     display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     padding: 0 1rem;
@@ -248,8 +247,10 @@ footer {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    appearance: none;
     /* display: none;*/ /*hide original SELECT element: */
 }
+
 
 .custom-select:after {
     content: '';
@@ -310,7 +311,7 @@ footer {
     left: 0;
     right: 0;
     z-index: 99;
-    display: none;
+    /* display: none; */
 }
 
 .select-items.open {
