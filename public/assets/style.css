@@ -8,7 +8,7 @@
 a {
     text-decoration: none;
     /* may need to move */
-    color: var(--slate);
+    /* color: var(--slate); */
     
 }
 :root {
@@ -108,10 +108,9 @@ header p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
-    margin-top: 10rem;
+    margin-left: 55%;
+    margin-top: 3rem;
     margin-bottom: 3rem;
-    
 }
 
 #email-input {
@@ -123,13 +122,13 @@ header p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    margin-left: 1rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-.login-btn {
-    margin-top: 10px;
+#login-btn {
+    margin-top: 10px !important;
     background-color: var(--lace);
     border: 2px solid var(--slate);
     border-radius: 30px;
@@ -148,7 +147,7 @@ header p{
     -webkit-user-select: none;
     touch-action: manipulation;
     height: 2.5rem;
-    width: 14rem;
+    width: auto;
 }
 
 #register-btn {
@@ -171,15 +170,61 @@ header p{
     -webkit-user-select: none;
     touch-action: manipulation;
     height: 2.5rem;
-    width: 14rem;
+    width: auto;
 }
 
-.login-btn:hover, #playlistBtn:hover, #register-btn:hover, .homeOnCLick {
+#login-btn a, #register-btn a {
+    color: var(--slate);
+    text-decoration: none;
+}
+
+#login-btn a:hover, #register-btn a:hover {
+    color: var(--cherry);
+    text-decoration: none;
+}
+
+#login-btn:hover, #playlistBtn:hover, #register-btn:hover, .homeOnCLick {
     background-color: var(--lace); 
     border: 2px solid var(--cherry);
-    color: var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic ;
+}
+
+#main-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--lace);
+    font-size: 2.5rem;
+    padding: 3rem 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subtitle-container {
+    margin-top: 1rem;
+    background-color: transparent;
+    /* border: 2px solid var(--lace);
+    border-radius: 30px;
+    box-shadow: var(--lace) -4px 4px 0px 0px,  var(--lace) 4px -4px 0px 0px;  */
+    color: var(--lace);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#subtitle {
+    font-family: 'pathway extreme', cursive;
+    color: var(--lace);
+    padding: 1rem;
+    font-size: 1rem;
 }
 
 
@@ -289,7 +334,6 @@ footer {
     touch-action: manipulation;
     height: 2.5rem;
     margin-right: 1rem;
-   
 }
 
 #form-input {
