@@ -42,8 +42,8 @@
                 </ul>
               </div>
             </div>
-            <form action = "/logout?_method=DELETE" method="POST">
-              <button type="submit" class="btn btn-primary">Logout</button>
+            <form action = "/logout?_method=DELETE" method="POST" style="margin-right: 4%;">
+              <button type="submit" id="logout-btn">Logout</button>
             </form>
           </nav>
     </header>
@@ -83,8 +83,10 @@
     </div>
 
     <div id="playlist-container">
-      <h2 id="music-quote">"Music is the strongest form of magic." - Marilyn Manson</h2>
-      <h2 id="playlist-title"></h2>
+      <div id="quote-container">
+        <h2 id="music-quote">"Music is the strongest form of magic." - Marilyn Manson</h2>
+      </div>
+        <h2 id="playlist-title"></h2>
       <div class="card" style="width: 18rem;">
         <ul id="playlist" class="list-group list-group-flush"></ul>
       </div>
