@@ -7,6 +7,9 @@
 }
 a {
     text-decoration: none;
+    /* may need to move */
+    color: var(--slate);
+    
 }
 :root {
     /* Color pallete ^^*/
@@ -107,11 +110,25 @@ header p{
     justify-content: center;
     margin: auto;
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
     
 }
 
-#login-btn {
+#email-input {
+    margin: 2rem;
+}
+
+#register-container {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.login-btn {
     margin-top: 10px;
     background-color: var(--lace);
     border: 2px solid var(--slate);
@@ -131,15 +148,40 @@ header p{
     -webkit-user-select: none;
     touch-action: manipulation;
     height: 2.5rem;
+    width: 14rem;
 }
 
-#login-btn:hover, #playlistBtn:hover, .homeOnCLick {
+#register-btn {
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    width: 14rem;
+}
+
+.login-btn:hover, #playlistBtn:hover, #register-btn:hover, .homeOnCLick {
     background-color: var(--lace); 
     border: 2px solid var(--cherry);
     color: var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic ;
 }
+
 
 #launch-playlist {
     max-width: fit-content;
@@ -182,8 +224,9 @@ header p{
     border: 2px solid var(--cherry);
     color: var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
-    font-style: italic;
+    font-style: italic; 
 }
+
 
 footer {
     background-color: transparent;
@@ -196,7 +239,117 @@ footer {
     margin: .25rem;
 
 }
-/* -------------------------------- */
+
+/* login/signup pages */
+
+#login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--lace); 
+    margin-bottom: 10rem;
+    font-size: 1rem;
+    
+}
+
+#signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--lace); 
+    margin-bottom: 10rem;
+    font-size: 1rem;
+    
+}
+
+#login-btn {
+    margin-top: 15px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    margin-right: 1rem;
+   
+}
+
+#form-input {
+    margin: 2rem;
+}
+
+
+#email, #password, #name {
+    margin: 2rem, 0, 0, 0;
+    height: 2rem;
+    border-radius: 10px;
+    padding: 0 10px;
+    
+}
+
+#submit-btn {
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    margin-left: 7.25rem;
+}
+
+#signup-btn {
+    margin-top: 15px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    margin-left: 1rem;
+}
 /* playlist.html */
 #playlist-background-container {
     position: fixed;
