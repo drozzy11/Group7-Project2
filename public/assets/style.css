@@ -150,6 +150,10 @@ header p{
     width: auto;
 }
 
+#logout-btn {
+    margin-right: 8%;
+}
+
 #login-btn a, #register-btn a{
     color: var(--slate);
     text-decoration: none;
@@ -205,11 +209,18 @@ header p{
     text-align: center;
 }
 
+#quote-container {
+    margin-top: 5%;
+}
+
 #subtitle, #music-quote {
     font-family: 'pathway extreme', cursive;
     color: var(--lace);
     padding: 1rem;
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
