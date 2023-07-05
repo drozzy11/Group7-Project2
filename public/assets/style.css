@@ -7,6 +7,7 @@
 }
 a {
     text-decoration: none;
+    /* may need to move */
     color: var(--slate);
     
 }
@@ -21,24 +22,8 @@ a {
     --night: #04100E;
     --white: #FFFFFF;
 }
-/* index.html */
-
 body {
     height: 100vh;
-}
-
-#background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--current);
-    background-image: linear-gradient(to bottom right, var(--citrus) 33%, var(--current) 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* z-index: -1; */
 }
 /* index.html: header/nav styling */
 @media (max-width: 767px) {
@@ -51,10 +36,9 @@ body {
         display: none;
     }
 }
-
-
 .micIcon {
     cursor: pointer;
+    margin: 0 0 0 1rem;
 }
 
 header {
@@ -63,10 +47,26 @@ header {
 header p{
     margin: 0%;
 }
+
+
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--current);
+    background-image: linear-gradient(to bottom right, var(--citrus) 33%, var(--current) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start !important;
     max-width: fit-content;
     padding: 0;
 }
@@ -81,12 +81,23 @@ header p{
     font-family: 'Bungee Shade', cursive;    
     color: var(--lace);
     font-size: 2.5rem;
-    padding-right: 45%;
+    padding: 0 2rem 0 0;
 }
-#navbar-text {
+#navbar-text{
     color: var(--lace);
     font-family: 'Pathway Extreme', sans-serif;
-    height: auto;
+    display: flex;
+    align-items: flex-end ;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+#nav-bar li a{
+    color: var(--lace) !important;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 2rem;
+    display: flex;
 }
 
 
@@ -216,6 +227,7 @@ header p{
     font-style: italic; 
 }
 
+
 footer {
     background-color: transparent;
     color: var(--lace);
@@ -339,6 +351,19 @@ footer {
     margin-left: 1rem;
 }
 /* playlist.html */
+#playlist-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+    background-image: linear-gradient(to bottom, var(--cherry) 33%, var(--current) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .parameter-container {
     margin: auto;
@@ -347,11 +372,39 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     
 }
 
-.genre-container {
+/* .genre-container {
     margin: 15px;
+} */
+.bubble {
+    margin: 2rem  !important
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: 'Pathway Extreme', sans-serif;
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
 }
 
 .popularity-container {
@@ -362,9 +415,6 @@ footer {
     margin: 15px;
 }
 
-
-
-
 .form {
     width: 100%;
     display: flex;
@@ -373,12 +423,33 @@ footer {
     justify-content: center;
 
 }
+.button-container {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
 
 #generate-playlist-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+
 }
 /* playlist page */ 
 
@@ -399,3 +470,20 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+
+#music-quote {
+    font-family: 'Pathway Extreme', sans-serif;
+    text-shadow: var(--slate) -.1rem .1rem 0;
+    color: var(--lace);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 2rem;
+    font-size: larger;
+}
+
+
+/* hide and show classes */
+.hide {
+    display: none !important;
+};

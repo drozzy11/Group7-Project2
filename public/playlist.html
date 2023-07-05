@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groove Hub</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/assets/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groove Hub</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Pathway+Extreme:ital@0;1&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+  <div id="playlist-background-container">
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/index.html">GH</a>
+        <nav class="navbar navbar-expand-lg" id="nav-container">
+            <div class="container-fluid" id="nav">
+              <a class="navbar-brand" href="#">
+                <img class="micIcon" src="./assets/brand/voice-record-lace.png" alt="Logo" width="50" height="50" margin="0">
+              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">
+                  <img src="./assets/brand/voice-record-lace.png" alt="Navbar Toggler Icon">
+                </span>
               </button>
-        
+              <h1 id="navbar-title">GrooveHub</h1>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" id="nav-bar">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <form action = "/logout?_method=DELETE" method="POST">
               <button type="submit" class="btn btn-primary">Logout</button>
@@ -24,92 +48,97 @@
           </nav>
     </header>
 
-    <main> 
-        <div class="parameter-container">
-        <div class="genre-container">
-          <select class="form-select" id="genre-select" aria-label="Default select example">
-            <option selected>Genre</option>
-            <option value="rock">Rock</option>
-            <option value="pop">Pop</option>
-            <option value="country">Country</option>
-          </select>
-        </div>
+  <main> 
+    <div class="parameter-container">
+    <div class="genre-container bubble">
+      <select class="custom-select" id="genre-select" aria-label="dropdownMenuGenre">
+        <option selected>Genre</option>
+        <option value="rock">Rock</button></option>
+        <option value="pop">Pop</button></option>
+        <option value="country">Country</button></option>
+      </select>
+    </div>
 
-        <div class="popularity-container">
-            <select id="popularity-select" class="form-select" aria-label="Default select example">
-                <option selected>Popularity</option>
-                <option value="50">Top Hits</option>
-                <option value="0">New Wave</option>
-            </select>
-        </div>
+    <div class="popularity-container dropdown bubble">
+      <select class="custom-select" id="popularity-select" aria-label="select popularity">
+        <option selected>Popularity</option>
+        <option value="50">Top Hits</option>
+        <option value="0">New Wave</option>
+      </select>
+    </div>
 
-        <div class="number-container">
-            <select id="num-songs-select" class="form-select" aria-label="Default select example">
-                <option selected>Number of Songs</option>
-                <option value="3">3</option>
-                <option value="6">6</option>
-                <option value="8">8</option>
-            </select>
-        </div>
+    <div class="number-container dropdown bubble">
+      <select class="custom-select" data-bs-toggle="dropdown" id="num-songs-select" aria-label="select number of songs">
+        <option selected># of Songs</option>
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+        <!-- as long as I can set a value to list items I should be able to keep the API working and style the dropdown appropriately -->
+      </select>
+    </div>
                     
     </div>
-                
-    <button type="button" class="btn btn-secondary" id="generate-playlist-btn">Generate Playlist</button>
+    <div class="button-container">
+      <button type="button" class="btn btn-secondary" id="generate-playlist-btn">Generate Playlist</button>
+    </div>
 
     <div id="playlist-container">
-      <h2 id="playlist-title">Playlist</h2>
+      <h2 id="music-quote">"Music is the strongest form of magic." - Marilyn Manson</h2>
+      <h2 id="playlist-title"></h2>
       <div class="card" style="width: 18rem;">
         <ul id="playlist" class="list-group list-group-flush"></ul>
       </div>
     </div>
     
     </div>
-</main>
+  </main>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
-<script>
-$(document).ready(function () {
-  $("#generate-playlist-btn").click(function () {
-    const genre = $("#genre-select").val();
-    const popularity = $("#popularity-select").val();
-    const numSongs = $("#num-songs-select").val();
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
+  <script>
+  $(document).ready(function () {
+    $("#generate-playlist-btn").click(function () {
+      const genre = $("#genre-select").val();
+      const popularity = $("#popularity-select").val();
+      const numSongs = $("#num-songs-select").val();
 
-    $.ajax({
-      url: "/callback",
-      data: {
-        genre: genre,
-        popularity: popularity,
-        numSongs: numSongs
-      },
-      success: function (response) {
-        console.log(response); // Log the response to the browser console for inspection
+      $.ajax({
+        url: "/callback",
+        data: {
+          genre: genre,
+          popularity: popularity,
+          numSongs: numSongs
+        },
+        success: function (response) {
+          console.log(response); // Log the response to the browser console for inspection
 
-        const tracks = response.tracks.tracks; // Access the inner tracks array
+          const tracks = response.tracks.tracks; // Access the inner tracks array
 
-        const playlist = tracks.map(function (track) {
-          return `
-            <li class="list-group-item">
-              <div class="d-flex align-items-center">
-                <img src="${track.cover}" alt="Cover Image" class="mr-3">
-                <div>
-                  <a href="${track.link}" target="_blank">
-                    <h5>${track.name}</h5>
-                  </a>
-                  <p>Artist: ${track.artist}</p>
+          const playlist = tracks.map(function (track) {
+            return `
+              <li class="list-group-item">
+                <div class="d-flex align-items-center">
+                  <img src="${track.cover}" alt="Cover Image" class="mr-3">
+                  <div>
+                    <a href="${track.link}" target="_blank">
+                      <h5>${track.name}</h5>
+                    </a>
+                    <p>Artist: ${track.artist}</p>
+                  </div>
                 </div>
-              </div>
-            </li>`;
-        });
+              </li>`;
+          });
 
-        $("#playlist").html(playlist.join(""));
-      },
-      error: function (xhr, status, error) {
-        console.log(error); // Log the error to the browser console
-      }
+          $("#playlist").html(playlist.join(""));
+        },
+        error: function (xhr, status, error) {
+          console.log(error); // Log the error to the browser console
+        }
+      });
     });
   });
-});
 
-</script>
+  </script>
+  <script src="./assets/index.js"></script>
+</div>
 </body>
 </html>
