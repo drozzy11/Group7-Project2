@@ -35,6 +35,7 @@ body {
 }
 .micIcon {
     cursor: pointer;
+    margin: 0 0 0 1rem;
 }
 
 header {
@@ -43,6 +44,16 @@ header {
 header p{
     margin: 0%;
 }
+
+/* .container-fluid {
+    background-color: transparent;
+    color: var(--lace);
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    
+    
+} */
 /* index.html */
 
 
@@ -63,7 +74,7 @@ header p{
 #nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start !important;
     max-width: fit-content;
     padding: 0;
 }
@@ -78,12 +89,23 @@ header p{
     font-family: 'Bungee Shade', cursive;    
     color: var(--lace);
     font-size: 2.5rem;
-    padding-right: 45%;
+    padding: 0 2rem 0 0;
 }
-#navbar-text {
+#navbar-text{
     color: var(--lace);
     font-family: 'Pathway Extreme', sans-serif;
-    height: auto;
+    display: flex;
+    align-items: flex-end ;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+#nav-bar li a{
+    color: var(--lace) !important;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 2rem;
+    display: flex;
 }
 
 
@@ -212,8 +234,11 @@ footer {
     
 }
 
-.genre-container {
+/* .genre-container {
     margin: 15px;
+} */
+.bubble {
+    margin: 2rem  !important
 }
 
 /* The container must be positioned relative: */
@@ -303,6 +328,18 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+
+#music-quote {
+    font-family: 'Pathway Extreme', sans-serif;
+    text-shadow: var(--slate) -.1rem .1rem 0;
+    color: var(--lace);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 2rem;
+    font-size: larger;
+}
+
 
 /* hide and show classes */
 .hide {

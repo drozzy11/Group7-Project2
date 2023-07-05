@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groove Hub</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groove Hub</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Pathway+Extreme:ital@0;1&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
-    <!-- Our CSS -->
-    <link rel="stylesheet" href="./assets/style.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Pathway+Extreme:ital@0;1&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
   <div id="playlist-background-container">
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg" id="nav-container">
+            <div class="container-fluid" id="nav">
               <a class="navbar-brand" href="#">
                 <img class="micIcon" src="./assets/brand/voice-record-lace.png" alt="Logo" width="50" height="50" margin="0">
               </a>
@@ -31,14 +31,23 @@
                 </span>
               </button>
               <h1 id="navbar-title">GrooveHub</h1>
-              <p id="navbar-text">Your <i><b>Mood</b></i>. Your <i><b>Music</b></i>. Your <i><b>Groove</b></i>.</p>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" id="nav-bar">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
     </header>
 
   <main> 
     <div class="parameter-container">
-    <div class="dropdown genre-container">
+    <div class="genre-container bubble">
       <select class="custom-select" id="genre-select" aria-label="dropdownMenuGenre">
         <option selected>Genre</option>
         <option value="rock">Rock</button></option>
@@ -47,7 +56,7 @@
       </select>
     </div>
 
-    <div class="popularity-container dropdown">
+    <div class="popularity-container dropdown bubble">
       <select class="custom-select" id="popularity-select" aria-label="select popularity">
         <option selected>Popularity</option>
         <option value="50">Top Hits</option>
@@ -55,12 +64,13 @@
       </select>
     </div>
 
-    <div class="number-container dropdown">
+    <div class="number-container dropdown bubble">
       <select class="custom-select" data-bs-toggle="dropdown" id="num-songs-select" aria-label="select number of songs">
-        <option selected>Number of Songs</option>
+        <option selected># of Songs</option>
         <option value="3">3</option>
         <option value="6">6</option>
         <option value="8">8</option>
+        <!-- as long as I can set a value to list items I should be able to keep the API working and style the dropdown appropriately -->
       </select>
     </div>
                     
@@ -69,8 +79,9 @@
       <button type="button" class="btn btn-secondary" id="generate-playlist-btn">Generate Playlist</button>
     </div>
 
-    <div id="playlist-container" class="hide">
-      <h2 id="playlist-title">Playlist</h2>
+    <div id="playlist-container">
+      <h2 id="music-quote">"Music is the strongest form of magic." - Marilyn Manson</h2>
+      <h2 id="playlist-title"></h2>
       <div class="card" style="width: 18rem;">
         <ul id="playlist" class="list-group list-group-flush"></ul>
       </div>
