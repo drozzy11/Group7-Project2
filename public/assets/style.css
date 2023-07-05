@@ -127,7 +127,7 @@ header p{
     margin-bottom: 3rem;
 }
 
-#login-btn {
+#login-btn, #register-btn, #logout-btn{
     margin-top: 10px !important;
     background-color: var(--lace);
     border: 2px solid var(--slate);
@@ -150,30 +150,7 @@ header p{
     width: auto;
 }
 
-#register-btn {
-    margin-top: 10px;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-    width: auto;
-}
-
-#login-btn a, #register-btn a {
+#login-btn a, #register-btn a{
     color: var(--slate);
     text-decoration: none;
 }
@@ -183,7 +160,15 @@ header p{
     text-decoration: none;
 }
 
-#login-btn:hover, #playlistBtn:hover, #register-btn:hover, .homeOnCLick {
+#logout-btn a:hover, #logout-btn:hover {
+    color: var(--current);
+    border: 2px solid var(--current);
+    text-decoration: none;
+    box-shadow: var(--current) -4px 4px 0;
+    font-style: italic ;
+}
+
+#login-btn:hover, #playlistBtn:hover, #register-btn:hover {
     background-color: var(--lace); 
     border: 2px solid var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
@@ -207,7 +192,7 @@ header p{
     align-items: center;
 }
 
-#subtitle-container {
+#subtitle-container{
     margin-top: 1rem;
     background-color: transparent;
     /* border: 2px solid var(--lace);
@@ -220,7 +205,7 @@ header p{
     text-align: center;
 }
 
-#subtitle {
+#subtitle, #music-quote {
     font-family: 'pathway extreme', cursive;
     color: var(--lace);
     padding: 1rem;
@@ -515,7 +500,7 @@ footer {
     justify-content: center;
 }
 
-#music-quote {
+/* #music-quote {
     font-family: 'Pathway Extreme', sans-serif;
     text-shadow: var(--slate) -.1rem .1rem 0;
     color: var(--lace);
@@ -524,7 +509,7 @@ footer {
     align-items: center;
     padding: 6rem 2rem;
     font-size: larger;
-}
+} */
 
 
 /* hide and show classes */
