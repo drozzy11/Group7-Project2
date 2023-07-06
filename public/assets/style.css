@@ -1,4 +1,4 @@
-/* general styling */
+/* ---GENERAL STYLING--- */
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +22,32 @@ a {
 body {
     height: 100vh;
 }
-/* -------INDEX HTML STYLING ------- */
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: center;
 
+}
+#subtitle, #music-quote {
+    font-family: 'pathway extreme', cursive;
+    color: var(--lace);
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hide {
+    display: none !important;
+}
+/* ---END OF GENERAL STYLING--- */
+
+
+
+
+/* -------INDEX HTML STYLING ------- */
 /* index.html overall */
 #background-container {
     position: fixed;
@@ -37,7 +61,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 @media (max-width: 767px) {
     /* Modify the styles for smaller screens (up to 767px width) */
     #navbar-toggler {
@@ -51,7 +74,6 @@ body {
     font-size: 0.9rem;
     }
 }
-
 @media (max-width: 576px) {
     /* Modify the styles for even smaller screens (up to 576px width) */
     #navbar-title {
@@ -66,8 +88,6 @@ body {
         margin: 0 !important;
     }
 } 
-
-
 @media (max-width: 991px) {
     .navbar-toggler {
         display: none;
@@ -80,7 +100,6 @@ body {
     cursor: pointer;
     margin: 0 0 0 1rem;
 }
-
 header {
     background-color: transparent;
 }
@@ -123,9 +142,7 @@ header p{
     padding: 0 2rem;
     display: flex;
 }
-
 /* index.html: login styling */
-
 #login-container {
     max-width: fit-content;
     display: flex;
@@ -151,7 +168,6 @@ header p{
     justify-content: center;
     align-items: center;
 }
-
 #title {
     font-family: 'Bungee Shade', cursive;
     color: var(--lace);
@@ -189,6 +205,9 @@ footer {
     margin: .25rem;
 }
 /* ----END OF INDEX HMTML STYLING---- */
+
+
+
 
 /* ----------BUTTON STYLING-------- */
 /* -------------all pages---------- */
@@ -316,7 +335,6 @@ footer {
     height: 2.5rem;
     margin-left: 0;
 }
-
 .button-container {
     margin: 1rem;
     display: flex;
@@ -349,34 +367,7 @@ footer {
 
 
 
-
-#subtitle, #music-quote {
-    font-family: 'pathway extreme', cursive;
-    color: var(--lace);
-    padding: 1rem;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-
-
-
-
-
-/*---- login/signup pages -----*/
-/* @media (min-width: 1000px){
-    .form-signup {
-        position: absolute;
-        bottom: 48%;
-        
-    }
-
-} */
-
+/*---- LOGIN + SIGNUP EJS -----*/
 #login-form {
     width: 100%;
     display: flex;
@@ -389,7 +380,6 @@ footer {
     font-size: 1rem;
     
 }
-
 #signup-form {
     width: 100%;
     display: flex;
@@ -402,14 +392,9 @@ footer {
     font-size: 1rem;
     
 }
-
-
-
 #form-input {
     margin: 2rem;
 }
-
-
 .regis-form {
     height: 2rem;
     border: 2px solid var(--slate);
@@ -420,7 +405,6 @@ footer {
     display: flex;
     justify-content: flex-end;
 }
-
 #login-form h1, #signup-form h1 {
     font-family: 'Bungee Shade', cursive;
     color: var(--lace);
@@ -430,7 +414,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 .log-form {
     height: 2rem;
     border: 2px solid var(--slate);
@@ -455,11 +438,14 @@ footer {
     
 }
 
-
-
 #signup-anchor {
     color: var(--slate);
 }
+/*---- END OF LOGIN + SIGNUP EJS -----*/
+
+
+
+
 /* -----PLAYLIST HTML STYLING----- */
 /* --mobile styling for playlist */
 @media (max-width: 576px) {
@@ -569,8 +555,7 @@ footer {
 .number-container {
     margin: 15px;
 }
-/* The container must be positioned relative: */
-.custom-select {
+.custom-select { /* The container must be positioned relative: */
     position: relative;
     font-family: 'Pathway Extreme', sans-serif;
     margin-top: 10px;
@@ -659,34 +644,12 @@ footer {
     font-weight: 600;
     text-decoration: none;
 }
+/* ---- END OF PLAYLIST PAGE STYLING ---*/
 
 
 
 
-
-
-
-
-
-
-.form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 10px;
-    justify-content: center;
-
-}
-
-/* playlist page */ 
-
-
-
-
-
-
-/* ABOUT PAGE */
-
+/*-----ABOUT PAGE -------*/
 #about-background-container {
     position: fixed;
     top: 0;
@@ -699,7 +662,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 #about-title {
     font-family: 'Bungee Shade', cursive;
     color: var(--lace);
@@ -715,10 +677,5 @@ footer {
     margin-top: 1rem;
     margin-left: 1.5rem;
     font-size: medium;
-}
-
-
-/* hide and show classes */
-.hide {
-    display: none !important;
 };
+/* -----END OF ABOUT PAGE STYLING----- */
