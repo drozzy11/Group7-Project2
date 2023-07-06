@@ -337,16 +337,50 @@ footer {
 }
 
 
+.regis-form {
+    height: 2rem;
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#login-form h1 {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--lace);
+    font-size: 2.5rem;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-form {
+    height: 2rem;
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    padding: 0 10px;
+    display: flex;
+    justify-content: center
+}
 #email, #password, #name {
     margin: 2rem, 0, 0, 0;
     height: 2rem;
-    border-radius: 10px;
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
     padding: 0 10px;
     
 }
 
 #submit-btn {
-    margin-top: 10px;
+    margin-top: 10%;
     background-color: var(--lace);
     border: 2px solid var(--slate);
     border-radius: 30px;
@@ -369,7 +403,7 @@ footer {
 }
 
 #signup-btn {
-    margin-top: 15px;
+    margin-top: 1.5%;
     background-color: var(--lace);
     border: 2px solid var(--slate);
     border-radius: 30px;
