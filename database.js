@@ -3,9 +3,6 @@
 const Songs = require('./models/Songs');
 const Users = require('./models/Users');
 
-// Rest of the code
-// database.js
-
 // Import the necessary models and dependencies
 
 // Function to insert songs into the 'songs' table
