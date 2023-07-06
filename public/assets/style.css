@@ -7,9 +7,6 @@
 }
 a {
     text-decoration: none;
-    /* may need to move */
-    /* color: var(--slate); */
-    
 }
 :root {
     /* Color pallete ^^*/
@@ -25,31 +22,9 @@ a {
 body {
     height: 100vh;
 }
-/* index.html: header/nav styling */
-@media (max-width: 767px) {
-    .navbar-toggler {
-    display: none;
-    }
-}
-@media (max-width: 991px) {
-    .navbar-toggler {
-        display: none;
-    }
-}
-.micIcon {
-    cursor: pointer;
-    margin: 0 0 0 1rem;
-}
+/* -------INDEX HTML STYLING ------- */
 
-header {
-    background-color: transparent;
-}
-header p{
-    margin: 0%;
-}
-
-
-
+/* index.html overall */
 #background-container {
     position: fixed;
     top: 0;
@@ -63,6 +38,55 @@ header p{
     background-position: center;
 }
 
+@media (max-width: 767px) {
+    /* Modify the styles for smaller screens (up to 767px width) */
+    #navbar-toggler {
+        margin-top: 2%;
+    }
+    #navbar-title {
+    font-size: 2rem;
+    }
+
+    #navbar-text {
+    font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Modify the styles for even smaller screens (up to 576px width) */
+    #navbar-title {
+    font-size: 1.8rem;
+    }
+
+    #navbar-text {
+    display: none !important;
+    margin: none;
+    }
+    #login-container {
+        margin: 0 !important;
+    }
+} 
+
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: none;
+    }
+    #login-container {
+        margin-left: 15% !important;
+    }
+}
+.micIcon {
+    cursor: pointer;
+    margin: 0 0 0 1rem;
+}
+
+header {
+    background-color: transparent;
+}
+header p{
+    margin: 0%;
+}
 #nav-container {
     display: flex;
     flex-direction: row;
@@ -100,7 +124,6 @@ header p{
     display: flex;
 }
 
-
 /* index.html: login styling */
 
 #login-container {
@@ -112,11 +135,6 @@ header p{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-
-#email-input {
-    margin: 2rem;
-}
-
 #register-container {
     max-width: fit-content;
     display: flex;
@@ -126,7 +144,54 @@ header p{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+/* Index.html Main Styling */
+#main-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#title {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--lace);
+    font-size: 2.5rem;
+    padding: 3rem 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subtitle-container{
+    margin-top: 1rem;
+    background-color: transparent;
+    color: var(--lace);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#launch-playlist {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+footer {
+    background-color: transparent;
+    color: var(--lace);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 8vh;
+    width: 100vw;
+    margin: .25rem;
+}
+/* ----END OF INDEX HMTML STYLING---- */
+
+/* ----------BUTTON STYLING-------- */
+/* -------------all pages---------- */
 #login-btn, #register-btn, #logout-btn{
     margin-top: 10px !important;
     background-color: var(--lace);
@@ -149,21 +214,17 @@ header p{
     height: 2.5rem;
     width: auto;
 }
-
 #logout-btn {
     margin-right: 8%;
 }
-
 #login-btn a, #register-btn a{
     color: var(--slate);
     text-decoration: none;
 }
-
 #login-btn a:hover, #register-btn a:hover, #signup-btn a:hover, #submit-btn:hover, #login-btn:hover, #logout-btn:hover{
     color: var(--cherry);
     text-decoration: none;
 }
-
 #logout-btn a:hover, #logout-btn:hover, #num-songs-select:hover, #popularity-select:hover, #genre-select:hover, #generate-playlist-btn:hover{
     color: var(--current);
     border: 2px solid var(--current);
@@ -171,68 +232,12 @@ header p{
     box-shadow: var(--current) -4px 4px 0;
     font-style: italic ;
 }
-
 #login-btn:hover, #playlistBtn:hover, #submit-btn:hover, #signup-btn:hover, #register-btn:hover {
     background-color: var(--lace); 
     border: 2px solid var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic ;
 }
-
-#main-index {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#title {
-    font-family: 'Bungee Shade', cursive;
-    color: var(--lace);
-    font-size: 2.5rem;
-    padding: 3rem 2rem 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#subtitle-container{
-    margin-top: 1rem;
-    background-color: transparent;
-    /* border: 2px solid var(--lace);
-    border-radius: 30px;
-    box-shadow: var(--lace) -4px 4px 0px 0px,  var(--lace) 4px -4px 0px 0px;  */
-    color: var(--lace);
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-#quote-container {
-    margin-top: 5%;
-}
-
-#subtitle, #music-quote {
-    font-family: 'pathway extreme', cursive;
-    color: var(--lace);
-    padding: 1rem;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-#launch-playlist {
-    max-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    margin-top: 2rem;
-}
-
 #playlistBtn {
     margin-top: 10px;
     background-color: var(--lace);
@@ -267,21 +272,110 @@ header p{
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic; 
 }
-
-
-footer {
-    background-color: transparent;
-    color: var(--lace);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 8vh;
-    width: 100vw;
-    margin: .25rem;
-
+#submit-btn {
+    margin-top: 10%;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    margin-left: 6.75rem;
+}
+#signup-btn {
+    margin-top: 1.5%;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    margin-left: 0;
 }
 
-/* login/signup pages */
+.button-container {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+#generate-playlist-btn {
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+
+}
+/* ----END OF BUTTON STYLING---- */
+
+
+
+
+
+#subtitle, #music-quote {
+    font-family: 'pathway extreme', cursive;
+    color: var(--lace);
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/*---- login/signup pages -----*/
+/* @media (min-width: 1000px){
+    .form-signup {
+        position: absolute;
+        bottom: 48%;
+        
+    }
+
+} */
 
 #login-form {
     width: 100%;
@@ -309,28 +403,7 @@ footer {
     
 }
 
-#login-btn {
-    margin-top: 15px;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-    margin-right: 1rem;
-}
+
 
 #form-input {
     margin: 2rem;
@@ -368,6 +441,9 @@ footer {
     display: flex;
     justify-content: center
 }
+#email-input {
+    margin: 2rem;
+}
 #email, #password, #name {
     margin: 2rem, 0, 0, 0;
     height: 2rem;
@@ -379,56 +455,88 @@ footer {
     
 }
 
-#submit-btn {
-    margin-top: 10%;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-    margin-left: 4.85rem;
-}
 
-#signup-btn {
-    margin-top: 1.5%;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-    margin-left: 1rem;
-}
 
 #signup-anchor {
     color: var(--slate);
 }
-/* playlist.html */
+/* -----PLAYLIST HTML STYLING----- */
+/* --mobile styling for playlist */
+@media (max-width: 576px) {
+    /* Modify the styles for even smaller screens (up to 576px width) */
+    .mobile-title {
+    font-size: 1.8rem !important;
+    }
+    #navbarNav {
+        display: flex;
+        justify-content: center;
+    }
+    #nav-bar {
+        display: flex;
+    }
+    #nav-container {
+        margin: 0;
+        display: flex;
+        justify-content: center !important;
+    }
+    #logout-btn {
+        display: flex;
+        margin: 0;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .parameter-container{
+        margin-top: 5rem;
+        max-width: fit-content;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    #quote-container{
+        margin: 0 !important;
+        position: relative;
+        left: 5%;
+    }
+    #music-quote{
+        position: relative;
+        text-align: center;
+        margin-top: -10%;
+    }
+    
+} 
+@media (max-width: 991px) and  (min-width: 577px) {
+    /* Modify the styles for even smaller screens (up to 576px width) */
+    #navbarNav {
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+    
+    #nav-container {
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+    #logout-btn {
+        margin-left: 25%;
+    }
+    #quote-container{
+        margin: 0;
+        position: relative;
+        left: 5%;
+    }
+    #music-quote{
+        position: relative;
+        text-align: center;
+    }
+    
+} 
+/* ---general playlist styling--- */
 #playlist-background-container {
     position: fixed;
     top: 0;
@@ -443,46 +551,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-#playlist {
-    border-radius: 30px;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.item-align {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cover {
-    width: 85%;
-    height: auto;
-}
-
-.list-group-item {
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--night);
-    font-family: 'Pathway Extreme', sans-serif;
-    font-weight: 600;
-    margin: 1rem;
-    text-align: center;
-}
-#playlist a{
-    color: var(--night);
-    font-family: 'Bungee Shade', cursive;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-
 .parameter-container {
     margin: auto;
     margin-top: 5rem;
@@ -491,16 +559,16 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
-
-/* .genre-container {
-    margin: 15px;
-} */
 .bubble {
     margin: 2rem  !important
 }
-
+.popularity-container {
+    margin: 15px;
+}
+.number-container {
+    margin: 15px;
+}
 /* The container must be positioned relative: */
 .custom-select {
     position: relative;
@@ -524,53 +592,6 @@ footer {
     touch-action: manipulation;
     height: 2.5rem;
 }
-
-.popularity-container {
-    margin: 15px;
-}
-
-.number-container {
-    margin: 15px;
-}
-
-.form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 10px;
-    justify-content: center;
-
-}
-.button-container {
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-}
-
-#generate-playlist-btn {
-    margin-top: 10px;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-
-}
-/* playlist page */ 
-
 #playlist-container {
     margin: auto;
     margin-top: 3rem;
@@ -580,7 +601,19 @@ footer {
     justify-content: center;
     
 }
-
+#quote-container {
+    margin-top: 5%;
+}
+#playlist-title {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--lace);
+    margin: auto;
+    margin-top: 3rem;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .card {
     margin: auto;
     margin-top: 3rem;
@@ -592,17 +625,66 @@ footer {
     background-color: transparent;
     width: 18rem;
 }
-
-#playlist-title {
-    font-family: 'Bungee Shade', cursive;
-    color: var(--lace);
-    margin: auto;
-    margin-top: 3rem;
-    max-width: fit-content;
+#playlist {
+    border-radius: 30px;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
+.list-group-item {
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--night);
+    font-family: 'Pathway Extreme', sans-serif;
+    font-weight: 600;
+    margin: 1rem;
+    text-align: center;
+}
+.item-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cover {
+    width: 85%;
+    height: auto;
+}
+#playlist a{
+    color: var(--night);
+    font-family: 'Bungee Shade', cursive;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: center;
+
+}
+
+/* playlist page */ 
+
+
+
+
+
+
 /* ABOUT PAGE */
 
 #about-background-container {
