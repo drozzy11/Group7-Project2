@@ -159,7 +159,7 @@ header p{
     text-decoration: none;
 }
 
-#login-btn a:hover, #register-btn a:hover {
+#login-btn a:hover, #register-btn a:hover, #signup-btn a:hover, #submit-btn:hover, #login-btn:hover, #logout-btn:hover{
     color: var(--cherry);
     text-decoration: none;
 }
@@ -172,7 +172,7 @@ header p{
     font-style: italic ;
 }
 
-#login-btn:hover, #playlistBtn:hover, #register-btn:hover {
+#login-btn:hover, #playlistBtn:hover, #submit-btn:hover, #signup-btn:hover, #register-btn:hover {
     background-color: var(--lace); 
     border: 2px solid var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
