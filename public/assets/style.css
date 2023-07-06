@@ -390,6 +390,10 @@ footer {
     height: 2.5rem;
     margin-left: 1rem;
 }
+
+#signup-anchor {
+    color: var(--slate);
+}
 /* playlist.html */
 #playlist-background-container {
     position: fixed;
