@@ -427,15 +427,21 @@ footer {
 }
 
 .list-group-item {
+    background-color: var(--lace);
     border: 2px solid var(--slate);
     border-radius: 30px;
     box-shadow: var(--slate) -4px 4px 0;
-    color: var(--cherry);
+    color: var(--night);
     font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1.5rem;
     font-weight: 600;
     margin: 1rem;
     text-align: center;
+}
+#playlist a{
+    color: var(--night);
+    font-family: 'Bungee Shade', cursive;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 
@@ -550,7 +556,7 @@ footer {
 }
 
 #playlist-title {
-    font-family: 'Pathway Extreme', sans-serif;
+    font-family: 'Bungee Shade', cursive;
     color: var(--lace);
     margin: auto;
     margin-top: 3rem;
