@@ -500,6 +500,33 @@ footer {
     }
     
 } 
+@media (max-width: 991px) and  (min-width: 577px) {
+    /* Modify the styles for even smaller screens (up to 576px width) */
+    #navbarNav {
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+    
+    #nav-container {
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+    #logout-btn {
+        margin-left: 25%;
+    }
+    #quote-container{
+        margin: 0;
+        position: relative;
+        left: 5%;
+    }
+    #music-quote{
+        position: relative;
+        text-align: center;
+    }
+    
+} 
 /* ---general playlist styling--- */
 #playlist-background-container {
     position: fixed;
