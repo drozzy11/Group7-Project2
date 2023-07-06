@@ -397,11 +397,45 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+
     
     background-image: linear-gradient(to bottom, var(--cherry) 33%, var(--current) 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#playlist {
+    border-radius: 30px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.item-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cover {
+    width: 85%;
+    height: auto;
+}
+
+.list-group-item {
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--cherry);
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem;
+    text-align: center;
 }
 
 
@@ -493,16 +527,31 @@ footer {
 }
 /* playlist page */ 
 
-.card {
+#playlist-container {
     margin: auto;
     margin-top: 3rem;
     max-width: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+}
+
+.card {
+    margin: auto;
+    margin-top: 3rem;
+    max-width: 30rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    width: 18rem;
 }
 
 #playlist-title {
+    font-family: 'Pathway Extreme', sans-serif;
+    color: var(--lace);
     margin: auto;
     margin-top: 3rem;
     max-width: fit-content;
@@ -511,16 +560,6 @@ footer {
     justify-content: center;
 }
 
-/* #music-quote {
-    font-family: 'Pathway Extreme', sans-serif;
-    text-shadow: var(--slate) -.1rem .1rem 0;
-    color: var(--lace);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6rem 2rem;
-    font-size: larger;
-} */
 
 
 /* hide and show classes */
