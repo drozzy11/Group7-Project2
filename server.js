@@ -29,10 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride('_method'));
 
-
 app.use(routes);
-
-
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
@@ -77,6 +74,8 @@ app.get('/callback', (req, res) => {
     });
 });
 
-app.listen(3008, () => {
-  console.log('Server listening on port 3008');
+const PORT = process.env.PORT || 3008;
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
