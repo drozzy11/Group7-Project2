@@ -13,24 +13,4 @@ document.querySelector('.micIcon').addEventListener('click', () => {
 
 //playlist page styling functions
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Get the dropdown element
-  const genreSelect = document.getElementById('genre-select');
-  // Get the playlist title element
-  const playlistTitle = document.getElementById('playlist-title');
-  // Add an event listener to the dropdown
-  genreSelect.addEventListener('change', function() {
-    // Get the selected value from the dropdown
-    const selectedGenre = genreSelect.value;
 
-    // Update the playlist title with the selected genre
-    playlistTitle.textContent = `${selectedGenre} Playlist`;
-  });
-
-  // Hide and show playlist
-  document.querySelector('#generate-playlist-btn').addEventListener('click', () => {
-    document.querySelector('#quote-container').classList.add('hide');
-    document.querySelector('#playlist-container').classList.remove('hide');
-    document.querySelector('#generate-playlist-btn').classList.add('hide');
-  });
-});
