@@ -7,9 +7,6 @@
 }
 a {
     text-decoration: none;
-    /* may need to move */
-    /* color: var(--slate); */
-    
 }
 :root {
     /* Color pallete ^^*/
@@ -25,6 +22,22 @@ a {
 body {
     height: 100vh;
 }
+/* -------INDEX HTML STYLING ------- */
+
+/* index.html overall */
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--current);
+    background-image: linear-gradient(to bottom right, var(--citrus) 33%, var(--current) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* index.html: header/nav styling */
 @media (max-width: 767px) {
     .navbar-toggler {
@@ -47,22 +60,6 @@ header {
 header p{
     margin: 0%;
 }
-
-
-
-#background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--current);
-    background-image: linear-gradient(to bottom right, var(--citrus) 33%, var(--current) 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 #nav-container {
     display: flex;
     flex-direction: row;
@@ -100,7 +97,6 @@ header p{
     display: flex;
 }
 
-
 /* index.html: login styling */
 
 #login-container {
@@ -112,11 +108,6 @@ header p{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-
-#email-input {
-    margin: 2rem;
-}
-
 #register-container {
     max-width: fit-content;
     display: flex;
@@ -126,7 +117,54 @@ header p{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+/* Index.html Main Styling */
+#main-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#title {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--lace);
+    font-size: 2.5rem;
+    padding: 3rem 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subtitle-container{
+    margin-top: 1rem;
+    background-color: transparent;
+    color: var(--lace);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#launch-playlist {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+footer {
+    background-color: transparent;
+    color: var(--lace);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 8vh;
+    width: 100vw;
+    margin: .25rem;
+}
+/* ----END OF INDEX HMTML STYLING---- */
+
+/* ----------BUTTON STYLING-------- */
+/* -------------all pages---------- */
 #login-btn, #register-btn, #logout-btn{
     margin-top: 10px !important;
     background-color: var(--lace);
@@ -149,21 +187,17 @@ header p{
     height: 2.5rem;
     width: auto;
 }
-
 #logout-btn {
     margin-right: 8%;
 }
-
 #login-btn a, #register-btn a{
     color: var(--slate);
     text-decoration: none;
 }
-
 #login-btn a:hover, #register-btn a:hover, #signup-btn a:hover, #submit-btn:hover, #login-btn:hover, #logout-btn:hover{
     color: var(--cherry);
     text-decoration: none;
 }
-
 #logout-btn a:hover, #logout-btn:hover, #num-songs-select:hover, #popularity-select:hover, #genre-select:hover, #generate-playlist-btn:hover{
     color: var(--current);
     border: 2px solid var(--current);
@@ -171,68 +205,12 @@ header p{
     box-shadow: var(--current) -4px 4px 0;
     font-style: italic ;
 }
-
 #login-btn:hover, #playlistBtn:hover, #submit-btn:hover, #signup-btn:hover, #register-btn:hover {
     background-color: var(--lace); 
     border: 2px solid var(--cherry);
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic ;
 }
-
-#main-index {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#title {
-    font-family: 'Bungee Shade', cursive;
-    color: var(--lace);
-    font-size: 2.5rem;
-    padding: 3rem 2rem 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#subtitle-container{
-    margin-top: 1rem;
-    background-color: transparent;
-    /* border: 2px solid var(--lace);
-    border-radius: 30px;
-    box-shadow: var(--lace) -4px 4px 0px 0px,  var(--lace) 4px -4px 0px 0px;  */
-    color: var(--lace);
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-#quote-container {
-    margin-top: 5%;
-}
-
-#subtitle, #music-quote {
-    font-family: 'pathway extreme', cursive;
-    color: var(--lace);
-    padding: 1rem;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-#launch-playlist {
-    max-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    margin-top: 2rem;
-}
-
 #playlistBtn {
     margin-top: 10px;
     background-color: var(--lace);
@@ -267,19 +245,100 @@ header p{
     box-shadow: var(--cherry) -4px 4px 0;
     font-style: italic; 
 }
-
-
-footer {
-    background-color: transparent;
-    color: var(--lace);
+#submit-btn {
+    margin-top: 10%;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    margin-left: 5.25rem;
+}
+#signup-btn {
+    margin-top: 1.5%;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
+    margin-left: 1rem;
+}
+.button-container {
+    margin: 1rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    height: 8vh;
-    width: 100vw;
-    margin: .25rem;
+}
+#generate-playlist-btn {
+    margin-top: 10px;
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--slate);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 2.5rem;
 
 }
+
+
+
+#quote-container {
+    margin-top: 5%;
+}
+
+#subtitle, #music-quote {
+    font-family: 'pathway extreme', cursive;
+    color: var(--lace);
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
 
 /* login/signup pages */
 
@@ -309,28 +368,7 @@ footer {
     
 }
 
-#login-btn {
-    margin-top: 15px;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-    margin-right: 1rem;
-}
+
 
 #form-input {
     margin: 2rem;
@@ -368,6 +406,9 @@ footer {
     display: flex;
     justify-content: center
 }
+#email-input {
+    margin: 2rem;
+}
 #email, #password, #name {
     margin: 2rem, 0, 0, 0;
     height: 2rem;
@@ -379,51 +420,7 @@ footer {
     
 }
 
-#submit-btn {
-    margin-top: 10%;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-    margin-left: 4.85rem;
-}
 
-#signup-btn {
-    margin-top: 1.5%;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-    margin-left: 1rem;
-}
 
 #signup-anchor {
     color: var(--slate);
@@ -494,9 +491,7 @@ footer {
     
 }
 
-/* .genre-container {
-    margin: 15px;
-} */
+
 .bubble {
     margin: 2rem  !important
 }
@@ -541,34 +536,7 @@ footer {
     justify-content: center;
 
 }
-.button-container {
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-}
 
-#generate-playlist-btn {
-    margin-top: 10px;
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--slate);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0 1rem;
-    line-height: 2.5;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    height: 2.5rem;
-
-}
 /* playlist page */ 
 
 #playlist-container {
