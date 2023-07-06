@@ -292,7 +292,7 @@ footer {
     -webkit-user-select: none;
     touch-action: manipulation;
     height: 2.5rem;
-    margin-left: 5.25rem;
+    margin-left: 6.75rem;
 }
 #signup-btn {
     margin-top: 1.5%;
@@ -314,8 +314,9 @@ footer {
     -webkit-user-select: none;
     touch-action: manipulation;
     height: 2.5rem;
-    margin-left: 1rem;
+    margin-left: 0;
 }
+
 .button-container {
     margin: 1rem;
     display: flex;
@@ -366,7 +367,15 @@ footer {
 
 
 
-/* login/signup pages */
+/*---- login/signup pages -----*/
+/* @media (min-width: 1000px){
+    .form-signup {
+        position: absolute;
+        bottom: 48%;
+        
+    }
+
+} */
 
 #login-form {
     width: 100%;
