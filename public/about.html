@@ -21,6 +21,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+    <div id="about-background-container">
+        <header>
+            <nav class="navbar navbar-expand-lg" id="nav-container">
+                <div class="container-fluid" id="nav">
+                <a class="navbar-brand" href="#">
+                    <img class="micIcon" src="./assets/brand/voice-record-lace.png" alt="Logo" width="50" height="50" margin="0">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    <img src="./assets/brand/voice-record-lace.png" alt="Navbar Toggler Icon">
+                    </span>
+                </button>
+                <h1 id="navbar-title">GrooveHub</h1>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" id="nav-bar">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+                <form action = "/logout?_method=DELETE" method="POST" style="margin-right: 4%;">
+                <button type="submit" id="logout-btn">Logout</button>
+                </form>
+            </nav>
+        </header>
     
 </body>
 </html>
