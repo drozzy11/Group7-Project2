@@ -15,9 +15,9 @@ initializePassport(
   );
 
 
-router.get('/', checkAuthenticated,  (req, res) => {
-  res.render('index.ejs', { name: req.user.name });
-});
+//router.get('/', checkAuthenticated,  (req, res) => {
+  //res.render('index.ejs', { name: req.user.name });
+//});
 
 router.get('/login', checkNotAuthenticated, (req, res) => {
   res.render('login.ejs');
