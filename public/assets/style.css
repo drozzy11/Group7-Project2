@@ -38,15 +38,50 @@ body {
     background-position: center;
 }
 
-/* index.html: header/nav styling */
+@media (max-width: 767px) {
+    /* Modify the styles for smaller screens (up to 767px width) */
+    #navbar-toggler {
+        margin-top: 2%;
+    }
+    #navbar-title {
+    font-size: 2rem;
+    }
+
+    #navbar-text {
+    font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Modify the styles for even smaller screens (up to 576px width) */
+    #navbar-title {
+    font-size: 1.8rem;
+    }
+
+    #navbar-text {
+    display: none !important;
+    margin: none;
+    }
+    #login-container {
+        margin: 0 !important;
+    }
+} 
+
+
 @media (max-width: 767px) {
     .navbar-toggler {
     display: none;
+    }
+    #navbar-text {
+        display: none;
     }
 }
 @media (max-width: 991px) {
     .navbar-toggler {
         display: none;
+    }
+    #login-container {
+        margin-left: 15% !important;
     }
 }
 .micIcon {
