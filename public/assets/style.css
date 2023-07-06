@@ -68,14 +68,6 @@ body {
 } 
 
 
-@media (max-width: 767px) {
-    .navbar-toggler {
-    display: none;
-    }
-    #navbar-text {
-        display: none;
-    }
-}
 @media (max-width: 991px) {
     .navbar-toggler {
         display: none;
@@ -351,6 +343,7 @@ footer {
     height: 2.5rem;
 
 }
+/* ----END OF BUTTON STYLING---- */
 
 
 
@@ -459,6 +452,54 @@ footer {
     color: var(--slate);
 }
 /* -----PLAYLIST HTML STYLING----- */
+/* --mobile styling for playlist */
+@media (max-width: 576px) {
+    /* Modify the styles for even smaller screens (up to 576px width) */
+    .mobile-title {
+    font-size: 1.8rem !important;
+    }
+    #navbarNav {
+        display: flex;
+        justify-content: center;
+    }
+    #nav-bar {
+        display: flex;
+    }
+    #nav-container {
+        margin: 0;
+        display: flex;
+        justify-content: center !important;
+    }
+    #logout-btn {
+        display: flex;
+        margin: 0;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .parameter-container{
+        margin-top: 5rem;
+        max-width: fit-content;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    #quote-container{
+        margin: 0 !important;
+        position: relative;
+        left: 5%;
+    }
+    #music-quote{
+        position: relative;
+        text-align: center;
+        margin-top: -10%;
+    }
+    
+} 
 /* ---general playlist styling--- */
 #playlist-background-container {
     position: fixed;
