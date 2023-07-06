@@ -354,9 +354,7 @@ footer {
 
 
 
-#quote-container {
-    margin-top: 5%;
-}
+
 
 #subtitle, #music-quote {
     font-family: 'pathway extreme', cursive;
@@ -460,7 +458,8 @@ footer {
 #signup-anchor {
     color: var(--slate);
 }
-/* playlist.html */
+/* -----PLAYLIST HTML STYLING----- */
+/* ---general playlist styling--- */
 #playlist-background-container {
     position: fixed;
     top: 0;
@@ -475,46 +474,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-#playlist {
-    border-radius: 30px;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.item-align {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cover {
-    width: 85%;
-    height: auto;
-}
-
-.list-group-item {
-    background-color: var(--lace);
-    border: 2px solid var(--slate);
-    border-radius: 30px;
-    box-shadow: var(--slate) -4px 4px 0;
-    color: var(--night);
-    font-family: 'Pathway Extreme', sans-serif;
-    font-weight: 600;
-    margin: 1rem;
-    text-align: center;
-}
-#playlist a{
-    color: var(--night);
-    font-family: 'Bungee Shade', cursive;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-
 .parameter-container {
     margin: auto;
     margin-top: 5rem;
@@ -523,14 +482,16 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
-
-
 .bubble {
     margin: 2rem  !important
 }
-
+.popularity-container {
+    margin: 15px;
+}
+.number-container {
+    margin: 15px;
+}
 /* The container must be positioned relative: */
 .custom-select {
     position: relative;
@@ -554,14 +515,82 @@ footer {
     touch-action: manipulation;
     height: 2.5rem;
 }
-
-.popularity-container {
-    margin: 15px;
+#playlist-container {
+    margin: auto;
+    margin-top: 3rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#quote-container {
+    margin-top: 5%;
+}
+#playlist-title {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--lace);
+    margin: auto;
+    margin-top: 3rem;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card {
+    margin: auto;
+    margin-top: 3rem;
+    max-width: 30rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    width: 18rem;
+}
+#playlist {
+    border-radius: 30px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.list-group-item {
+    background-color: var(--lace);
+    border: 2px solid var(--slate);
+    border-radius: 30px;
+    box-shadow: var(--slate) -4px 4px 0;
+    color: var(--night);
+    font-family: 'Pathway Extreme', sans-serif;
+    font-weight: 600;
+    margin: 1rem;
+    text-align: center;
+}
+.item-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cover {
+    width: 85%;
+    height: auto;
+}
+#playlist a{
+    color: var(--night);
+    font-family: 'Bungee Shade', cursive;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.number-container {
-    margin: 15px;
-}
+
+
+
+
+
+
+
+
 
 .form {
     width: 100%;
@@ -574,38 +603,11 @@ footer {
 
 /* playlist page */ 
 
-#playlist-container {
-    margin: auto;
-    margin-top: 3rem;
-    max-width: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
 
-.card {
-    margin: auto;
-    margin-top: 3rem;
-    max-width: 30rem;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: transparent;
-    width: 18rem;
-}
 
-#playlist-title {
-    font-family: 'Bungee Shade', cursive;
-    color: var(--lace);
-    margin: auto;
-    margin-top: 3rem;
-    max-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
+
+
 /* ABOUT PAGE */
 
 #about-background-container {
