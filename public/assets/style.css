@@ -164,7 +164,7 @@ header p{
     text-decoration: none;
 }
 
-#logout-btn a:hover, #logout-btn:hover {
+#logout-btn a:hover, #logout-btn:hover, #num-songs-select:hover, #popularity-select:hover, #genre-select:hover, #generate-playlist-btn:hover{
     color: var(--current);
     border: 2px solid var(--current);
     text-decoration: none;
