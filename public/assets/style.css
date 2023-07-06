@@ -569,7 +569,37 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+/* ABOUT PAGE */
 
+#about-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-image: linear-gradient(to top right, var(--cherry) 33%, var(--citrus) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#about-title {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--lace);
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-size: x-large;
+}
+#about-text, #creators-text {
+    font-family: 'Pathway Extreme', sans-serif;
+    color: var(--lace);
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-size: medium;
+}
 
 
 /* hide and show classes */
