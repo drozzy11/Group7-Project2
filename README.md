@@ -22,5 +22,17 @@ Web Dev Simplified. (https://www.youtube.com/watch?v=-RCnNyD0L-s). (2023).
 
 
 ## Screenshots
+![Home Page](/public/assets/screenshots/home.png)
+![Login Page](/public/assets/screenshots/login.png)
+![Sign Up Page](/public/assets/screenshots/signup.png)
+![Playlist Page](/public/assets/screenshots/playlist.png)
+![Mobile Home Page](/public/assets/screenshots/mobile-home.png)
+![Mobile Login Page](/public/assets/screenshots/mobile-login.png)
+![Mobile Sign up Page](/public/assets/screenshots/mobile-signup.png)
+
+To Download our screen recordings, click these links: 
+
+[Screen Record Playlist Page](/public/assets/screenshots/screenrecord.mov)<br>
+[Mobile Playlist Page](/public/assets/screenshots/screenrecordmobile.mov)
 
 ## Deployed Page
